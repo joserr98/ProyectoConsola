@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(197, 197, 56);
+    background-color: #89ABE3FF;
 
 }
 
@@ -30,16 +30,14 @@ body {
     border-radius: 15% 0 0 15%;
     margin-top: 1em;
     position: relative;
-    z-index: -8;
 }
 
-#center{
+#middle{
     width: 23em;
     height: 20em;
     background-color:#6a5da0;
-   
     border-radius: 9% 9% 9% 9%;
-    
+    z-index: 4;
 }
 
 #right{
@@ -50,7 +48,7 @@ body {
     border-radius: 0 15% 15% 0;
     margin-top: 1em;
     position: relative;
-    z-index: -8;
+
 }
 
 #leftTrigger{
@@ -82,7 +80,7 @@ body {
 }
 
 #leftRightTrigger{
-    width: 3em;
+    width: 5em;
     height: 1.5em;
     background-color: #d5d5d3;
 
@@ -302,6 +300,7 @@ body {
     height: 16em;
     margin-left: 0.5em;
     margin-top: 1.5em;
+        
 }
 
 #lens{
@@ -323,6 +322,10 @@ body {
     height: 11em;
 
     background-color: #747570;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -389,7 +392,7 @@ body {
 
 
 #rightLeftTrigger {
-    width: 3em;
+    width: 5em;
     height: 1.5em;
     background-color:#d5d5d3;
 
@@ -430,7 +433,7 @@ body {
     flex-direction: row;
 }
 
-#powerButton{
+.powerLed{
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
@@ -438,7 +441,7 @@ body {
     background-color:#565750;
 }
 
-#powerName{
+#powerLedName{
     font-family: Nu Hanafudaya;
     color: #564886;
     width: 5em;
@@ -532,4 +535,38 @@ body {
     border-radius: 0 75% 75% 0;
     background-color: #463772;
 
+}
+
+.powerOn{
+    width: 0.8em;
+    height: 0.1em;
+    background-color: gray;
+    margin-top: 2.6em;
+    margin-left: 2.5em;
+}
+
+.powerOff{
+    width: 0.8em;
+    height: 0.1em;
+    background-color: gray;
+    margin-top: 2.6em;
+    margin-left: 3.3em; 
+    display: none;
+}
+
+.powerLedOn{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    margin: 1em 0 0 3.2em;
+    background-color:green;
+
+}
+
+.powerLedOff{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    margin: 1em 0 0 3.2em;
+    background-color:red;
 }
