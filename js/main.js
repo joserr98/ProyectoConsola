@@ -1,10 +1,11 @@
+const powerOn = document.querySelector(".powerOn");
+const powerOff = document.querySelector(".powerOff");
+const blur = document.getElementById( "blur" );
+
 function encenderConsola() {
-    var led = document.querySelector(".powerLed");
+    let led = document.querySelector(".powerLed");
     led.classList.add('powerLedOn');
     led.classList.remove('powerLed');
-
-    var powerOn = document.querySelector(".powerOn");
-    var powerOff = document.querySelector(".powerOff");
 
     powerOn.style.display = "none";
     powerOff.style.display ="block";
@@ -12,15 +13,17 @@ function encenderConsola() {
 
 
 function apagarConsola() {
-    var led = document.querySelector(".powerLedOn")
-    led.classList.add('powerLed');
+    let led = document.querySelector(".powerLedOn")
+    
+    led.style.transition = "3s";
+    led.classList.add('powerLedOff');
+    led.style.transition = "3s";
+    led.classList.remove('powerLedOff');
+    led.style.transition = "3s";
     led.classList.remove('powerLedOn');
-
-    led.style.backgroundcolor = "red";
-
-    var powerOff = document.querySelector(".powerOff");
-    var powerOn = document.querySelector(".powerOn");
+    led.classList.add('powerLed');
 
     powerOn.style.display = "block";
     powerOff.style.display = "none";
 }
+

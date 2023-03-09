@@ -36,7 +36,7 @@ body {
     width: 23em;
     height: 20em;
     background-color:#6a5da0;
-    border-radius: 9% 9% 9% 9%;
+    border-radius: 50% 50% 9% 9%;
     z-index: 4;
 }
 
@@ -48,7 +48,6 @@ body {
     border-radius: 0 15% 15% 0;
     margin-top: 1em;
     position: relative;
-
 }
 
 #leftTrigger{
@@ -70,7 +69,7 @@ body {
     height: 1.5em;
     background-color: #d5d5d3;
 
-    border-radius: 50% 0 0 25%;
+    border-radius: 70% 0 0 10%;
 
     display: flex;
     align-items: end;
@@ -292,6 +291,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -2em;
+
     
 }
 
@@ -413,7 +414,7 @@ body {
     align-items: end;
     justify-content: end;
 
-    border-radius: 0 50% 25% 0;
+    border-radius: 0 70% 10% 0;
     margin-bottom: 3em;
     
 }
@@ -570,3 +571,99 @@ body {
     margin: 1em 0 0 3.2em;
     background-color:red;
 }
+
+#curva{
+    width: 26em;
+    height: 3em;
+
+    background-color: #6a5da0;
+
+    border-radius: 45% 45% 0 0;
+    margin-left: -1.6em;
+    margin-top: -0.4em;
+
+}
+
+#curva2{
+    width: 26em;
+    height: 3em;
+
+    background-color: #6a5da0;
+
+    border-radius: 0 0 45% 45%;
+    margin-left: -1.6em;
+    margin-top: -1.7em;
+
+}
+
+
+#screen-gameboy-text {
+
+    display:none;
+    font-family: 'Asap', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #3232fc;
+    background: -webkit-linear-gradient(0deg, #3232fc 40%, #85e367 40%, #85e367 45%, #ff52e8 45%, #ff52e8 50%, #ff0151 50%, #ff0151 55%, #f9e52e 55%, #f9e52e 60%, #e8e8e8 60%);
+    background-position: 130px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: screen-gameboy-text 3s infinite linear;
+    animation: screen-gameboy-text 3s infinite linear;
+  }
+  @keyframes screen-gameboy-text {
+    0% {
+      color: #f9e52e;
+      background-position: -120px;
+      opacity: 0;
+    }
+    11.7% {
+      opacity: 0;
+    }
+    12% {
+      color: #f9e52e;
+      background-position: -120px;
+      opacity: 1;
+    }
+    19.5% {
+      color: #f9e52e;
+    }
+    21% {
+      color: #ff0151;
+    }
+    28.5% {
+      color: #ff0151;
+    }
+    30% {
+      color: #ff52e8;
+    }
+    37.5% {
+      color: #ff52e8;
+    }
+    39% {
+      color: #85e367;
+    }
+    46.5% {
+      color: #85e367;
+    }
+    48% {
+      color: #3232fc;
+    }
+    54% {
+      background-position: 130px;
+    }
+    81% {
+      opacity: 1;
+    }
+    96% {
+      opacity: 0;
+    }
+  }
