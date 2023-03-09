@@ -1,0 +1,535 @@
+body {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(197, 197, 56);
+
+}
+
+#console {
+    /* width: 40em; */
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+#left{
+    width: 10em;
+    height: 18em;   
+    background-color: #6a5da0;
+    margin-right: -4em;
+    border-radius: 15% 0 0 15%;
+    margin-top: 1em;
+    position: relative;
+    z-index: -8;
+}
+
+#center{
+    width: 23em;
+    height: 20em;
+    background-color:#6a5da0;
+   
+    border-radius: 9% 9% 9% 9%;
+    
+}
+
+#right{
+    width: 10em;
+    height: 18em;
+    background-color:#6a5da0;
+    margin-left: -4em;
+    border-radius: 0 15% 15% 0;
+    margin-top: 1em;
+    position: relative;
+    z-index: -8;
+}
+
+#leftTrigger{
+    width: 10em;
+    height: 4em;
+    /* background-color:#d5d5d3; */
+
+    display: flex;
+    flex-direction: row;
+
+    position:relative;
+    z-index: -8;
+    align-items: end;
+
+}
+
+#leftLeftTrigger {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #d5d5d3;
+
+    border-radius: 50% 0 0 25%;
+
+    display: flex;
+    align-items: end;
+    position:relative;
+    margin-bottom: 3em;
+    z-index: -8;
+}
+
+#leftRightTrigger{
+    width: 3em;
+    height: 1.5em;
+    background-color: #d5d5d3;
+
+    display: flex;
+    align-items: end;
+
+    position:relative;
+    border-radius: 0 25% 0 0;
+    margin-bottom: 3em;
+    z-index: -10;
+}
+
+#leftRemote{
+    width: 10em;
+    height: 16em;
+
+}
+
+#controller {
+    margin: 4em 0 0 2em;
+    width: 6em;
+    height: 6em;
+    margin-left: 1.7em;
+    margin-top: 2em;
+}
+
+.rectangle {
+    width: 4.3em;
+    height: 1.3em;
+
+    /* background-color:red; */
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.cross{
+    margin: 4em 0 0 2em;
+    width: 4.5em;
+    height: 4.5em;
+    background-color: #d5d5d3;
+}
+
+.blank{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#upButton{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+    border: 0.1em solid #b0b1ac;
+    border-style: solid solid none solid;
+    border-radius: 10%;
+}
+
+#upTriangle {
+    
+    border-right: 0.4em solid transparent;
+    border-bottom: 0.8em solid #bbbbb9;
+    border-left: 0.4em solid transparent;
+}
+
+#leftButton{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+    border-radius: 10%;
+    border: 0.1em solid #b0b1ac;
+    border-style: solid none solid solid;
+
+}
+
+#leftTriangle {
+    /* width: 1em; 
+    height: 1em;  */
+    border-right: 0.8em solid #bbbbb9;
+    border-top: 0.4em solid transparent;
+    border-bottom: 0.4em solid transparent; 
+}
+
+#middleButton{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+
+}
+
+#middleMark{
+    width: 1em;
+    height: 1em;
+
+    border-radius: 50%;
+
+    background-color: #bbbbb9;
+}
+
+#rightButton{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+    border: 0.1em solid #b0b1ac;
+    border-style: solid solid solid none;
+
+}
+
+#rightTriangle {
+    /* width: 1em; 
+    height: 1em;  */
+    border-left: 0.8em solid #bbbbb9;
+    border-top: 0.4em solid transparent;
+    border-bottom: 0.4em solid transparent; 
+}
+
+#downButton{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+    border: 0.1em solid #b0b1ac;
+    border-style: none solid solid solid;
+}
+
+#downTriangle {
+
+    border-right: 0.4em solid transparent;
+    border-top: 0.8em solid #bbbbb9;
+    border-left: 0.4em solid transparent;
+}
+
+.centerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1em;
+    margin-top: 1em;
+    transform:  rotate(9deg);
+    margin-right: 4em;
+}
+
+.rectangle2 {
+
+    height: 1em;
+    margin: 0.2em;
+    /* background-color:red; */
+    display: flex;
+    flex-direction: row;
+}
+
+.rectangle4{
+    width: 6em;
+    height: 1em;
+    margin: 0 0 0 1em;
+    /* background-color:red; */
+    display: flex;
+    flex-direction: row;
+    margin-right: -2.8em;
+}
+
+#select{
+    font-family: Nu Hanafudaya;
+    border-radius: 22%;
+    border: 0.1em solid #564886;
+    color: #564886;
+    width: 3.7em;
+    height: 1em;
+    display: flex;
+    justify-content: end;
+    font-size: 0.7em;
+    
+}
+
+#start{
+    font-family: Nu Hanafudaya;
+    border-radius: 22%;
+    border: 0.1em solid #564886;
+    color: #564886;
+    width: 3.3em;
+    height: 1em;
+    display: flex;
+    justify-content: end;
+    font-size: 0.7em;
+}
+
+#selectButton{
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #cfcfcd;
+    border-radius: 50%;
+}
+
+#startButton{
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #cfcfcd;
+    border-radius: 50%;
+}
+
+#brand{
+    width: 23em;
+    height: 1em;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#centerRemote{
+    width: 20em;
+    height: 16em;
+    margin-left: 0.5em;
+    margin-top: 1.5em;
+}
+
+#lens{
+    width: 19.8em;
+    height: 14em;
+
+    background-color: rgba(45,49,48,255);
+    border: 0.1em solid #a7aaa5;
+    border-radius: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+#screen{
+    width: 18em;
+    height: 11em;
+
+    background-color: #747570;
+
+}
+
+#consoleName{
+    width: 18em;
+    height: 1.25em;
+    margin-top: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameboy{
+    font-family: Futura BT;
+    color: #aeb0ab;
+    text-shadow: black 2px 0px 0px, black 1.75517px 0.958851px 0px, 
+                black 1.0806px 1.68294px 0px, black 0.141474px 1.99499px 0px, 
+                black -0.832294px 1.81859px 0px, black -1.60229px 1.19694px 0px, 
+                black -1.97998px 0.28224px 0px, black -1.87291px -0.701566px 0px, 
+                black -1.30729px -1.5136px 0px, black -0.421592px -1.95506px 0px, 
+                black 0.567324px -1.91785px 0px, black 1.41734px -1.41108px 0px, 
+                black 1.92034px -0.558831px 0px;
+}
+
+.advance{
+    font-family: Gamecuben;
+    color: #aeb0ab;
+    text-shadow: black 2px 0px 0px, black 1.75517px 0.958851px 0px, 
+                black 1.0806px 1.68294px 0px, black 0.141474px 1.99499px 0px, 
+                black -0.832294px 1.81859px 0px, black -1.60229px 1.19694px 0px, 
+                black -1.97998px 0.28224px 0px, black -1.87291px -0.701566px 0px, 
+                black -1.30729px -1.5136px 0px, black -0.421592px -1.95506px 0px, 
+                black 0.567324px -1.91785px 0px, black 1.41734px -1.41108px 0px, 
+                black 1.92034px -0.558831px 0px;
+}
+
+.nintendo{
+    font-family: Nu Hanafudaya;
+    color: #564886;
+    border-radius: 22%;
+    border: 0.1em solid #564886;
+    width: 4em;
+    margin-top: 1.3em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rightTrigger{
+    width: 10em;
+    height: 4em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+
+    position: relative;
+    z-index: -90;
+
+}
+
+
+#rightLeftTrigger {
+    width: 3em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+
+    border-radius: 25% 0 0 0;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-bottom: 3em; 
+}
+
+#rightRightTrigger{
+    width: 1.5em;
+    height: 1.5em;
+    background-color:#d5d5d3;
+
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+    border-radius: 0 50% 25% 0;
+    margin-bottom: 3em;
+    
+}
+
+#rightRemote{
+    width: 10em;
+    height: 16em;
+    margin-left: 2em;
+}
+
+#power{
+    width: 10em;
+    height: 1em;
+
+    margin-top: -2em;
+    display: flex;
+    flex-direction: row;
+}
+
+#powerButton{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    margin: 1em 0 0 3.2em;
+    background-color:#565750;
+}
+
+#powerName{
+    font-family: Nu Hanafudaya;
+    color: #564886;
+    width: 5em;
+    height: 0.5em;
+    margin: 1.3em 0 0 0.5em;
+    font-size: 0.7em;
+    
+}
+
+#buttons{
+    width: 10em;
+    height: 8em;
+    display: flex;
+    flex-direction: row;
+}
+
+.rectangle3{
+    display: flex;
+    flex-direction: row;
+}
+
+#aButton{
+    width: 1.75em;
+    height: 1.75em;
+    margin: 5em 0.7em 0 2em;
+    border-radius: 50%;
+    border: 0.1em solid #b0b1ac;
+    border-style: solid solid solid solid;
+    background-color: #d3d3d3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #bbbbb9;
+
+}
+
+#bButton{
+    width: 1.75em;
+    height: 1.75em;
+    margin: 4em 0 0 0.5em;
+    border-radius: 50%;
+    border: 0.1em solid #b0b1ac;
+    border-style: solid solid solid solid;
+    background-color: #d3d3d3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #bbbbb9;
+
+
+}
+
+.abButton{
+    margin-left: 0.6em;
+    margin-top: 0.4em;
+}
+
+#grid{
+    width: 10em;
+    height: 7em;
+    margin: 0.9em 0 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid{
+    width: 3.5em;
+    height: 0.25em;
+    margin: 0.2em 0 0.2em 1em;
+    
+    display: flex;
+    flex-direction: row;
+
+    transform:  rotate(170deg)
+}
+
+.leftGrid{
+    width: 0.5em;
+    height: 0.25em;
+    border-radius: 75% 0 0 75%;
+    background-color: #463772;
+
+}
+
+.middleGrid{
+    width: 2.5em;
+    height: 0.25em;
+    background-color: #463772;
+
+}
+
+.rightGrid{
+    width: 0.5em;
+    height: 0.25em;
+    border-radius: 0 75% 75% 0;
+    background-color: #463772;
+
+}
