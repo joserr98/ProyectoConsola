@@ -4,136 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Gameboy Advance</title>
+    <link rel="icon" type="image/png" href="/img/consoleico.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <div id="console">
-        <div id="left">
-            <div id="leftTrigger">
-                <div id="leftLeftTrigger"></div>
-                <div id="leftRightTrigger"></div>
+        <div id="console">
+            <div id="left">
+                <div id="leftTrigger">
+                    <div id="leftLeftTrigger"></div>
+                    <div id="leftRightTrigger"></div>
+                </div>
+                <div id="leftRemote">
+                    <div id="controller">
+                        <div class="rectangle">
+                            <div class="blank"></div>
+                            <div class="centerButton" id="upButton">
+                                <div id="upTriangle"></div>
+                            </div>
+                            <div class="blank"></div>
+                        </div>
+                        <div class="rectangle">
+                            <div class="centerButton" id="leftButton">
+                                <div id="leftTriangle"></div>
+                            </div>
+                            <div class="centerButton" id="middleButton">
+                                <div id="middleMark"></div>
+                            </div>
+                            <div class="centerButton" id="rightButton">
+                                <div id="rightTriangle"></div>
+                            </div>
+                        </div>
+                        <div class="rectangle">
+                            <div class="blank"></div>
+                            <div class="centerButton" id="downButton">
+                                <div id="downTriangle"></div>
+                            </div>
+                            <div class="blank"></div>
+                        </div>
+                    </div>
+                    <div id="options">
+                        <div class="rectangle2">
+                            <div id="select">
+                                <div>SELECT</div>
+                            </div>
+                            <div id="selectButton"></div>
+                        </div>
+                        <div class="rectangle4">
+                            <div id="start">
+                                <div>START</div>
+                            </div>
+                            <div id="startButton"></div>
+                        </div>
+                    </div>
+                    <div class="powerOn" onclick="encenderConsola();"></div>
+                    <div class="powerOff" onclick="apagarConsola();"></div>
+                </div>
             </div>
-            <div id="leftRemote">
-                <div id="controller">
-                    <div class="rectangle">
-                        <div class="blank"></div>
-                        <div class="centerButton" id="upButton">
-                            <div id="upTriangle"></div>
+            <div id="middle">
+                <div id="curva"></div>
+                <div id="brand">
+                    <div class="nintendo">Nintendo</div>
+                </div>
+                <div id="centerRemote">
+                    <div id="lens">
+                        <div id="screen">
+                            <div class="screen-gameboy-text">
+                                <span class="blue" style="--i:1">S</span>
+                                <span class="yellow" style="--i:2">U</span>
+                                <span class="red" style="--i:3">P</span>
+                                <span class="green" style="--i:4">E</span>
+                                <span class="yellow" style="--i:5">R</span>
+                                <br>
+                                <span class="red" style="--i:1">M</span>
+                                <span class="green" style="--i:2">A</span>
+                                <span class="yellow" style="--i:3">R</span>
+                                <span class="blue" style="--i:4">I</span>
+                                <span class="green" style="--i:5">O</span>
+                            </div>
+                            <div class="nintendo2"><img src="img/nintendo.png" alt="nintendo" style="width: 8em; height: 4em;"></div>
                         </div>
-                        <div class="blank"></div>
-                    </div>
-                    <div class="rectangle">
-                        <div class="centerButton" id="leftButton">
-                            <div id="leftTriangle"></div>
+                        <div id="consoleName">
+                            <div class="gameboy">GAME BOY</div> <div class="advance">ADVANCE  </div>
                         </div>
-                        <div class="centerButton" id="middleButton">
-                            <div id="middleMark"></div>
-                        </div>
-                        <div class="centerButton" id="rightButton">
-                            <div id="rightTriangle"></div>
-                        </div>
-                    </div>
-                    <div class="rectangle">
-                        <div class="blank"></div>
-                        <div class="centerButton" id="downButton">
-                            <div id="downTriangle"></div>
-                        </div>
-                        <div class="blank"></div>
                     </div>
                 </div>
-                <div id="options">
-                    <div class="rectangle2">
-                        <div id="select">
-                            <div>SELECT</div>
-                        </div>
-                        <div id="selectButton"></div>
+                <div id="curva2"></div>
+            </div>
+            <div id="right">
+                <div id="rightTrigger">
+                    <div id="rightLeftTrigger"></div>
+                    <div id="rightRightTrigger"></div>
+                </div>
+                <div id="rightRemote">
+                    <div id="power">
+                        <div class="powerLed"></div>
+                        <div id="powerLedName">POWER</div>
                     </div>
-                    <div class="rectangle4">
-                        <div id="start">
-                            <div>START</div>
+                    <div id="buttons">
+                        <div id="rectangle3">
+                            <div id="aButton">
+                                <div class="abButton">A</div>
+                            </div>
                         </div>
-                        <div id="startButton"></div>
+                        <div id="rectangle3">
+                            <div id="bButton">
+                                <div class="abButton">B</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grid">
+                        <div class="grid">
+                            <div class="leftGrid"></div>
+                            <div class="middleGrid"></div>
+                            <div class="rightGrid"></div>
+                        </div>
+                        <div class="grid">
+                            <div class="leftGrid"></div>
+                            <div class="middleGrid"></div>
+                            <div class="rightGrid"></div>
+                        </div>
+                        <div class="grid">
+                            <div class="leftGrid"></div>
+                            <div class="middleGrid"></div>
+                            <div class="rightGrid"></div>
+                        </div>
+                        <div class="grid">
+                            <div class="leftGrid"></div>
+                            <div class="middleGrid"></div>
+                            <div class="rightGrid"></div>
+                        </div>
+                        <div class="grid">
+                            <div class="leftGrid"></div>
+                            <div class="middleGrid"></div>
+                            <div class="rightGrid"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="powerOn" onclick="encenderConsola();"></div>
-                <div class="powerOff" onclick="apagarConsola();"></div>
             </div>
         </div>
-        <div id="middle">
-            <div id="curva"></div>
-            <div id="brand">
-                <div class="nintendo">Nintendo</div>
-            </div>
-            <div id="centerRemote">
-                <div id="lens">
-                    <div id="screen">
-                        <div id="screen-gameboy-text">GAME BOY</div>
-                        
-                        
-                    </div>
-                    <div id="consoleName">
-                        <div class="gameboy">GAME BOY</div> <div class="advance">ADVANCE  </div>
-                    </div>
-                </div>
-            </div>
-            <div id="curva2"></div>
-        </div>
-        <div id="right">
-            <div id="rightTrigger">
-                <div id="rightLeftTrigger"></div>
-                <div id="rightRightTrigger"></div>
-            </div>
-            <div id="rightRemote">
-                <div id="power">
-                    <div class="powerLed"></div>
-                    <div id="powerLedName">POWER</div>
-                </div>
-                <div id="buttons">
-                    <div id="rectangle3">
-                        <div id="aButton">
-                            <div class="abButton">A</div>
-                        </div>
-                    </div>
-                    <div id="rectangle3">
-                        <div id="bButton">
-                            <div class="abButton">B</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="grid">
-                    <div class="grid">
-                        <div class="leftGrid"></div>
-                        <div class="middleGrid"></div>
-                        <div class="rightGrid"></div>
-                    </div>
-                    <div class="grid">
-                        <div class="leftGrid"></div>
-                        <div class="middleGrid"></div>
-                        <div class="rightGrid"></div>
-                    </div>
-                    <div class="grid">
-                        <div class="leftGrid"></div>
-                        <div class="middleGrid"></div>
-                        <div class="rightGrid"></div>
-                    </div>
-                    <div class="grid">
-                        <div class="leftGrid"></div>
-                        <div class="middleGrid"></div>
-                        <div class="rightGrid"></div>
-                    </div>
-                    <div class="grid">
-                        <div class="leftGrid"></div>
-                        <div class="middleGrid"></div>
-                        <div class="rightGrid"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
