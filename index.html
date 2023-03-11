@@ -69,12 +69,6 @@
                 <div id="centerRemote">
                     <div id="lens">
                         <div id="screen">
-                            <div class="game">
-                                <div id="mario"></div>
-                                <div id="plant"></div>
-                                <div id="fire"></div>
-                                
-                            </div>
                             <div class="supermario">
                                 <span class="blue" style="--i:1">S</span>
                                 <span class="yellow" style="--i:2">U</span>
@@ -89,6 +83,15 @@
                                 <span class="green" style="--i:5">O</span>
                             </div>
                             <div class="nintendo2"><img src="img/nintendo.png" alt="nintendo" style="width: 8em; height: 4em;"></div>
+                            <div class="game">
+                                <div id="sky">
+                                    <div id="mario"></div>
+                                    <div id="plant"></div>
+                                    <!-- <div id="fire"></div> -->
+                                    <!-- <div id="clouds"></div> -->
+                                </div>
+                                <div id="ground"></div>
+                            </div>
                         </div>
                         <div id="consoleName">
                             <div class="gameboy">GAME BOY</div> <div class="advance">ADVANCE  </div>
@@ -109,8 +112,8 @@
                     </div>
                     <div id="buttons">
                         <div id="rectangle3">
-                            <div id="aButton">
-                                <div class="abButton" target="iframe_a">A</div>
+                            <div id="aButton" onclick="marioJump();">
+                                <div class="abButton">A</div>
                             </div>
                         </div>
                         <div id="rectangle3">

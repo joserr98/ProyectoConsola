@@ -2,8 +2,8 @@ const powerOn = document.querySelector(".powerOn");
 const powerOff = document.querySelector(".powerOff");
 const superMarioText = document.querySelector(".supermario");
 const screen = document.querySelector("#screen");
-const mario = document.getElementById("mario")
-
+const mario = document.getElementById("mario");
+const plant = document.getElementById("plant");
 
 
 function encenderConsola() {
@@ -41,7 +41,28 @@ function supermario() {
 
 function game() {
     superMarioText.style.display = "none";
-    // GAME DISPLAY
+    document.querySelector('.game').style.display = "flex";
+    document.querySelector('#sky').style.display = "flex";
+    document.querySelector('#mario').style.display = "flex";
+    document.querySelector('#plant').style.display = "flex";
+    document.querySelector('#ground').style.display = "flex";
+    
+    marioJump();
+
+    let isAlive = setInterval(function (){
+    
+        let marioTop = parseInt(window.getComputedStyle(mario).getPropertyValue("margin-bottom"));
+        let plantLeft = parseInt(window.getComputedStyle(plant).getPropertyValue("margin-left"));
+        if(plantLeft <0 && plantLeft > -30 && marioTop <= 20){
+            // gameOver();
+    
+        }
+    },10);
+
+}
+
+function gameOver(){
+    document.querySelector('#gameover').style.display = "flex";
 }
 
 function apagarConsola() {
@@ -67,5 +88,13 @@ function redToInit() {
 }
 
 function marioJump(){
+    if (mario.classList != "jump"){
+    
+        mario.classList.add("jump");
 
+        setTimeout(function(){
+            mario.classList.remove("jump");
+        },500);
+    }
 }
+
