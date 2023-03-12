@@ -463,36 +463,6 @@ body {
     z-index: -8;
 }
 
-#rightLeftTrigger:hover {
-    width: 5em;
-    height: 1.8em;
-    background-color:#d5d5d3;
-
-    border-radius: 25% 0 0 0;
-
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    margin-bottom: 2.8em; 
-    rotate:20deg;
-}
-
-#rightRightTrigger:hover{
-    width: 1.5em;
-    height: 1.8em;
-    background-color:#d5d5d3;
-
-    display: flex;
-    align-items: end;
-    justify-content: end;
-
-    border-radius: 0 70% 10% 0;
-    margin-bottom: 2.8em;
-    border-right: 0.2em solid #a3a3a3;
-    z-index: -8;
-    rotate:20deg;
-}
-
 #rightRemote{
     width: 10em;
     height: 16em;
@@ -572,7 +542,6 @@ body {
 
 .abButton:hover{
     font-size: 0.9em;
-    
 
 }
 
@@ -680,7 +649,6 @@ body {
 
 .supermario{
     position: relative;
-    /* -webkit-box-reflect: below -0.2em linear-gradient(transparent, rgba(0,0,0,100)); */
     background-color: white;
     display: none;
     
@@ -694,6 +662,42 @@ body {
     
 }
   
+#pressA{
+    height: 10em;
+    width: 18em;
+    position: relative;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    display: none;
+    z-index: 100;
+}
+
+
+#pressA1{
+    height: 8em;
+    width: 18em;
+    position: relative;
+    background-color: black;
+    color: white;
+    display: none;
+    text-align: center;
+    z-index: 101;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    justify-content: space-evenly;
+}
+
+@keyframes pressAa {
+    0%,10%,100% {
+        transform: translateY(0)
+      }
+      45% {
+        transform: translateY(-0.6em)
+      }
+}
+
 @keyframes supermario {
     0%,10%,100% {
       transform: translateY(0)
@@ -858,34 +862,3 @@ body {
         background-image: none;
     }
 }
-
-/* #fire{
-    height: 0.5em;
-    width: 0.5em;
-
-    background-image: url(../img/fuego.png);
-    background-size: 0.5em 0.5em;
-    margin-bottom: 1.7em;
-    margin-left: 8em;
-
-    position: relative;
-
-    animation: obstacleFire 2s infinite linear;
-} */
-
-/* @keyframes obstacleFire {
-    0% {
-        margin-left: 15em;
-        background-image: url(../img/fuego.png);
-    }
-    50%{
-        background-image: url(../img/fuego.png);
-    }
-    95%{
-        background-image: url(../img/fuego.png);
-    }
-    100% {
-        margin-left: -3em;
-        background-image: none;
-    }
-} */

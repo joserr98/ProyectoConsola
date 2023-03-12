@@ -1,20 +1,22 @@
+// Constantes para el programa
+
 const powerOn = document.querySelector(".powerOn");
 const powerOff = document.querySelector(".powerOff");
 const superMarioText = document.querySelector(".supermario");
-const screen = document.querySelector("#screen");
+const screen = document.getElementById("screen");
 const mario = document.getElementById("mario");
 const plant = document.getElementById("plant");
+const pressA = document.getElementById("pressA");
 
+// Variables para contador TypeWritter 
+var i = 0;
+var txt = 'Pulsa "Start" para empezar...';
+var speed = 50;
 
 function encenderConsola() {
     let led = document.querySelector(".powerLed");
     led.classList.add('powerLedOn');
     led.classList.remove('powerLed');
-
-
-    
-    // textScreen2.style.display = "block";
-    // textScreen2.style.display = "none";
 
     powerOn.style.display = "none";
     powerOff.style.display ="block";
@@ -23,7 +25,8 @@ function encenderConsola() {
  
     animationNintendo = setTimeout(nintendo, 0);
     animationSuperMario = setTimeout(supermario, 1000);
-    animationGame = setTimeout(game,2250);
+    animationTypeWritter = setTimeout(typeWriter, 2250);
+    // animationGame = setTimeout(game,4000);
 
 }
 
@@ -35,12 +38,13 @@ function nintendo() {
 
 function supermario() {    
     document.querySelector('.nintendo2').style.display = "none";
-    superMarioText.style.display = "block";
+    superMarioText.style.display = "flex";
     
 }
 
 function game() {
-    superMarioText.style.display = "none";
+    pressA.style.display = "none";
+    
     document.querySelector('.game').style.display = "flex";
     document.querySelector('#sky').style.display = "flex";
     document.querySelector('#mario').style.display = "flex";
@@ -52,9 +56,10 @@ function game() {
     let isAlive = setInterval(function (){
     
         let marioTop = parseInt(window.getComputedStyle(mario).getPropertyValue("margin-bottom"));
+        console.log(marioTop);
         let plantLeft = parseInt(window.getComputedStyle(plant).getPropertyValue("margin-left"));
         if(plantLeft <0 && plantLeft > -30 && marioTop <= 20){
-            // gameOver();
+            gameOver();
     
         }
     },10);
@@ -62,7 +67,12 @@ function game() {
 }
 
 function gameOver(){
-    document.querySelector('#gameover').style.display = "flex";
+    document.querySelector('.game').style.display = "none";
+    document.querySelector('#sky').style.display = "none";
+    document.querySelector('#mario').style.display = "none";
+    document.querySelector('#plant').style.display = "none";
+    document.querySelector('#ground').style.display = "none";
+    alert('Game Over');
 }
 
 function apagarConsola() {
@@ -71,7 +81,6 @@ function apagarConsola() {
     
     led.classList.remove('powerLedOn');
     led.classList.add('powerLedOff');
-    superMarioText.style.display = "none";
     
     powerOn.style.display = "block";
     powerOff.style.display = "none";
@@ -98,3 +107,25 @@ function marioJump(){
     }
 }
 
+
+
+function typeWriter() {
+    superMarioText.style.display = "none";
+    pressA.style.display = "flex";
+    document.getElementById("pressA1").style.display = "flex";
+    if (i < txt.length) {
+      document.getElementById("pressA1").innerHTML += txt.charAt(i);
+      i++;
+      console.log(i);
+      setTimeout(typeWriter, speed);
+    }
+    setTimeout(function (){
+        document.getElementById("pressA1").style.animation =  "pressAa 0.5s linear infinite";
+    }, 2000);     
+    const element = document.getElementById("start");
+    element.addEventListener("click", game);
+}
+
+function pulsarStart() {
+    alert('holaa');
+}
