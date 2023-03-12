@@ -273,7 +273,7 @@ body {
     
 }
 
-#start{
+#start {
     font-family: Nu Hanafudaya;
     border-radius: 22%;
     border: 0.1em solid #313233;
@@ -307,11 +307,11 @@ body {
     border: 0.1em solid #b0b1ac;
 }
 
-#startButton:hover{
+/* #startButton:hover{
     width: 0.4em;
     height: 0.4em;
     border: 0.2em solid #b0b1ac;
-}
+} */
 
 #brand{
     width: 23em;
@@ -740,6 +740,18 @@ body {
     border: 0.1em solid black;    
 }
 
+#gameover {
+    width: 18em;
+    height: 10em;
+    background-image: url(../img/gameover2.png);
+    background-repeat: no-repeat;
+    background-size: 18em 10em;
+
+    display: none;
+    flex-direction: column;
+    border: 0.1em solid black;    
+}
+
 #mario{
     width: 1.5em;
     height: 2.5em;
@@ -767,6 +779,78 @@ body {
     }
 } */
 
+#screen-gameboy-text {
+    position: relative;
+  font-family: 'Asap', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.04em;
+  text-align: center;
+  opacity: 0;
+  transform: skew(-5deg);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #3232fc;
+  width: 10em;
+  height: 18em;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  background: -webkit-linear-gradient(0deg, #3232fc 40%, #85e367 40%, #85e367 45%, #ff52e8 45%, #ff52e8 50%, #ff0151 50%, #ff0151 55%, #f9e52e 55%, #f9e52e 60%, #e8e8e8 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: screen-gameboy-text 3s linear;
+  animation: screen-gameboy-text 3s linear;
+}
+@keyframes screen-gameboy-text {
+  0% {
+    color: #f9e52e;
+    background-position: -4.5em;
+    opacity: 0;
+  }
+  11.7% {
+    opacity: 0;
+  }
+  12% {
+    color: #f9e52e;
+    background-position: -4.5em;
+    opacity: 1;
+  }
+  19.5% {
+    color: #f9e52e;
+  }
+  21% {
+    color: #ff0151;
+  }
+  28.5% {
+    color: #ff0151;
+  }
+  30% {
+    color: #ff52e8;
+  }
+  37.5% {
+    color: #ff52e8;
+  }
+  39% {
+    color: #85e367;
+  }
+  46.5% {
+    color: #85e367;
+  }
+  48% {
+    color: #3232fc;
+  }
+  54% {
+    background-position: 5em;
+  }
+  81% {
+    color: #3232fc;
+  }
+  96% {
+    color: #3232fc;
+  }
+}
 
 .jump{
     animation: jump 0.6s linear;
