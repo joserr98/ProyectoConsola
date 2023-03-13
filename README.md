@@ -23,7 +23,7 @@ setTimeOut()
 ## Contacto
 
 Jose: joserr9807@gmail.com
-Link del proyecto: *https://github.com/joserr98/ProyectoConsola*
+Link del proyecto: *https://joserr98.github.io/ProyectoConsola/*
 
 ### Errores
 
